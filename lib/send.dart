@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:news_app/screen/splash.dart';
 
+import 'helper/dashboard.dart';
+
 class Send extends StatefulWidget {
   const Send({Key? key}) : super(key: key);
 
@@ -15,7 +17,7 @@ class _SendState extends State<Send> {
   void initState() {
     // TODO: implement initState
     Timer(Duration(milliseconds: 0), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Splash_Screen()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Dashboard()));
 
     });
 

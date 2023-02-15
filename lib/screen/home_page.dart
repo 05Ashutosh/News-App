@@ -9,6 +9,8 @@ import 'package:news_app/helper/news.dart';
 import 'package:news_app/model/catergoty_model.dart';
 import 'package:news_app/screen/article_view.dart';
 
+import '../helper/blog_title.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -27,7 +29,6 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    categories =getCategories();
     getNews();
 
   }
@@ -162,9 +163,8 @@ class Category_Title extends StatelessWidget {
   }
 }
 
-
 class BlogTitle extends StatelessWidget {
-  
+
   final String imageUrl, title ,desc,url;
 
 
@@ -180,13 +180,13 @@ class BlogTitle extends StatelessWidget {
         margin: EdgeInsets.only(top: 11,left: 11,right: 11),
         padding: const EdgeInsets.only(top:5,left: 5,right: 5,bottom: 5),
         decoration: BoxDecoration(
-          border:Border.all(color: Colors.grey),
-          borderRadius: BorderRadius.circular(5)
+            border:Border.all(color: Colors.grey),
+            borderRadius: BorderRadius.circular(5)
         ),
         child: Column(
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(5),
+                borderRadius: BorderRadius.circular(5),
                 child: Image.network(imageUrl)),
             const SizedBox(height: 7,),
             Text(title,style: TextStyle(color: Colors.blueGrey,fontSize: 16,fontWeight: FontWeight.w800),),
@@ -199,4 +199,5 @@ class BlogTitle extends StatelessWidget {
     );
   }
 }
+
 
